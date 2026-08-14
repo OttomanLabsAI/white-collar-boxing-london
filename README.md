@@ -74,7 +74,7 @@ design, with the story still running left to right.
 
 | Tab | Route | What it is |
 | --- | --- | --- |
-| 1 · The original | `/original/` | The club's site as it stands. A static local copy **could not be captured** — this build environment's network policy blocks `www.whitecollarboxinglondon.com`, so the tab says so plainly and falls back to the live site in a frame with an open-in-a-new-tab button. If their host also refuses framing, the note and button still stand. |
+| 1 · The original | `/original/` | The club's site as it stands, live in a frame (framing confirmed working on the deployed demo), with only an open-in-a-new-tab button above it. A static local copy **could not be captured** — this build environment's network policy blocks `www.whitecollarboxinglondon.com` — so the frame shows the real thing; the button is the guaranteed path if their host ever refuses embedding. |
 | 2 · New site | `/` | The new one-pager. Visitors arriving at the link land here, not on the old site. |
 | 3 · The offer | `/offer/` | The ask: £500 one-off for the site, £50 per round of changes afterwards — built from the new site's own stylesheet and component grammar. |
 

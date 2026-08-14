@@ -91,10 +91,11 @@ that link.
 `/original/` (live-frame fallback for the club's current site), `/offer/` (the
 price), and a fenced tab bar on the index wrap the site as a three-tab sales
 demo. The current site could not be mirrored locally - the sandbox egress
-policy blocks the club's domain - so tab 1 deliberately frames the live site
-and says so; never claim a local copy exists. The wrapper is designed to come
-off in minutes: follow "Removing the pitch wrapper" in the README, and keep
-the fence comments intact until then.
+policy blocks the club's domain - so tab 1 deliberately frames the live site,
+with only an open-in-a-new-tab button above the frame (the owner chose to
+drop the explanatory strip); never claim a local copy exists. The wrapper is
+designed to come off in minutes: follow "Removing the pitch wrapper" in the
+README, and keep the fence comments intact until then.
 
 ## Release ledger
 
@@ -104,3 +105,4 @@ the fence comments intact until then.
 | v1.1 | Three tabs: theirs, ours, and the ask | The demo now opens on the new page, keeps the club's current site one click away for the side-by-side, and closes with the offer — five hundred one-off, fifty a round of changes — every comparison line checkable against what the club's own pages say. The whole wrapper peels off in minutes the day they say yes. |
 | v1.2 | The demo tightens up and takes names | The comparison card's centre spine now runs dead straight on both pages, the three demo tabs stay on screen wherever you scroll, and signing up happens on the new site itself — a matching page that takes a name and holds a place, with the club's current form one click away until the new one is wired up. |
 | v1.3 | The club's own badge over the door | The site now wears the club's original logo in the header and footers, served straight from the club's own files, and if that file is ever unreachable the header quietly falls back to the typographic badge so nothing looks broken. |
+| v1.4 | Tab one gets out of the way | The first tab no longer explains itself: the club's current site fills the frame with nothing above it but the button that opens it in its own tab — and with the demo live, the frame is confirmed to be loading the real site. |

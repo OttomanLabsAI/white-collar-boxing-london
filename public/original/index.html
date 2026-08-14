@@ -19,24 +19,19 @@ body{
   font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
 }
 .snap{
-  padding:.85rem clamp(1rem,3vw,1.6rem) .95rem;
+  padding:.55rem clamp(1rem,3vw,1.6rem);
   border-bottom:1px solid rgba(237,231,220,.14);
-  display:flex;flex-wrap:wrap;align-items:center;gap:.35rem 1.4rem;
+  display:flex;justify-content:center;
 }
-.snap p{margin:0;font-size:.74rem;letter-spacing:.04em;line-height:1.6;color:#99A0AA;}
-.snap strong{color:#EDE7DC;font-weight:600;}
 .snap__btn{
-  margin-left:auto;max-width:100%;
+  max-width:100%;
   background:#C8102E;color:#fff;text-decoration:none;
   font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.55rem .85rem .5rem;
+  padding:.55rem .85rem .5rem;white-space:nowrap;
 }
 .snap__btn:hover{background:#E01234;}
 .frame{flex:1;display:flex;min-height:70vh;}
 .frame iframe{flex:1;width:100%;border:0;background:#EDE7DC;}
-@media (max-width:700px){
-  .snap__btn{margin-left:0;}
-}
 @media (max-width:380px){
   .snap__btn{font-size:.62rem;letter-spacing:.05em;}
 }
@@ -54,14 +49,9 @@ body{
 </nav>
 <!-- ==================== END PITCH TAB BAR ==================== -->
 
+<!-- Tab 1 frames the club's live site (framing confirmed working on the
+     deployed demo). The button is the guaranteed path either way. -->
 <div class="snap">
-  <p>
-    <strong>www.whitecollarboxinglondon.com</strong> — the club's website as it stands,
-    loaded live in the frame below. A static copy could not be captured when this demo
-    was assembled (14 August 2026): the build environment couldn't reach the domain, so
-    this tab shows the real thing rather than an imitation. If the frame stays blank,
-    the site is refusing to be embedded — use the button.
-  </p>
   <a class="snap__btn" href="https://www.whitecollarboxinglondon.com/" target="_blank" rel="noopener">Open the current site in a new tab ↗</a>
 </div>
 
