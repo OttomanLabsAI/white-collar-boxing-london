@@ -1,16 +1,23 @@
 /* ============================================================
    PITCH TAB BAR — demo chrome, not part of the site.
-   Shared by /, /original/ and /offer/. Delete this whole file
+   Shared by /, /original/ and /offer/. Pinned to the top of the
+   viewport at all times; the site's own sticky nav docks under
+   it (the header.nav override below). Delete this whole file
    when the pitch wrapper comes off — see README,
    "Removing the pitch wrapper".
    ============================================================ */
+:root{--pitch-bar:38px;}
+
 .pitch-tabs{
+  position:sticky;top:0;z-index:90;
+  box-sizing:border-box;height:var(--pitch-bar);
   display:flex;gap:2px;padding:6px 6px 0;
-  background:#060708;position:relative;z-index:90;
+  background:#060708;
 }
 .pitch-tabs a{
-  flex:1;display:block;text-align:center;
-  padding:.6rem .4rem .5rem;
+  box-sizing:border-box;flex:1;display:block;text-align:center;
+  height:32px;line-height:30px;  /* --pitch-bar minus container pad, minus borders */
+  padding:0 .5rem;
   background:#14181D;border:1px solid rgba(237,231,220,.14);border-bottom:0;
   color:#99A0AA;text-decoration:none;
   font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
@@ -27,3 +34,8 @@
 @media (max-width:360px){
   .pitch-tabs a span{display:none;}
 }
+
+/* While the bar is pinned, the site's sticky nav docks below it,
+   and in-page anchors stop short of the pinned chrome. */
+header.nav{top:var(--pitch-bar);}
+[id]{scroll-margin-top:calc(var(--pitch-bar) + 68px);}
