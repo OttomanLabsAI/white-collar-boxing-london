@@ -77,6 +77,15 @@ Content, design, and behaviour are as supplied by the owner. Do not tidy markup,
 rename classes, rewrite copy, or modernise CSS unless asked - changes to the
 design are their own release, requested deliberately.
 
+## The sign-up form
+
+`/sign-up/` is part of the site (not pitch chrome) and every sign-up button
+points at it. The form is front-end only - submit shows a confirmation panel
+and sends nothing - because the club's real handler could not be reached or
+inspected from the sandbox. The card links to the club's current live form as
+a fallback; wire the form to a real destination at handover before removing
+that link.
+
 ## Pitch chrome (temporary)
 
 `/original/` (live-frame fallback for the club's current site), `/offer/` (the
@@ -93,3 +102,4 @@ the fence comments intact until then.
 | --- | --- | --- |
 | v1.0 | Ten weeks from the desk, now live | The White Collar Boxing London one-pager is a real site: the whole pitch — the ten weeks, the safety story, the cost question, fight night — on one fast dark page that holds together from phone to desktop, with a themed page for wrong turns and deployment wired so every future push goes straight to production. |
 | v1.1 | Three tabs: theirs, ours, and the ask | The demo now opens on the new page, keeps the club's current site one click away for the side-by-side, and closes with the offer — five hundred one-off, fifty a round of changes — every comparison line checkable against what the club's own pages say. The whole wrapper peels off in minutes the day they say yes. |
+| v1.2 | The demo tightens up and takes names | The comparison card's centre spine now runs dead straight on both pages, the three demo tabs stay on screen wherever you scroll, and signing up happens on the new site itself — a matching page that takes a name and holds a place, with the club's current form one click away until the new one is wired up. |

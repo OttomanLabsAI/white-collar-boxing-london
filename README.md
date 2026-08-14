@@ -14,12 +14,31 @@ public/                  everything served
   favicon.svg            two corners, navy vs red
   robots.txt
   _headers               security + caching headers
+  sign-up/index.html     sign-up page (form is front-end only — see below)
   assets/
     css/main.css         the page's stylesheet
+    css/signup.css       sign-up form styles, built from the same tokens
     js/reveal.js         scroll-reveal behaviour
+    js/signup.js         sign-up form submit → confirmation panel
 wrangler.jsonc           assets-only Workers config, no Worker script
 package.json             wrangler devDependency + dev/deploy scripts
 ```
+
+## The sign-up form
+
+Every sign-up button on the site points at `/sign-up/`, a page in the site's
+own design. The club's live sign-up page could not be fetched from this build
+environment (its domain is blocked here), so the page is the new design's own
+take on the job, not a copy.
+
+The form is **front-end only**: submitting shows the confirmation panel and
+sends nothing anywhere. Two guard rails until it is wired up at handover:
+
+- the form card carries a visible link to the club's current live sign-up
+  form, so no real signup can be lost in the meantime;
+- wiring options, in rough order of effort: point the form at the club's
+  existing handler, a hosted form/email service, or a small Worker (which
+  would mean moving off assets-only config).
 
 ## Local development
 
@@ -68,9 +87,9 @@ the club's own pages as Google lists them (checked 14 August 2026).
 
 1. Delete `public/original/` and `public/offer/` — each is self-contained.
 2. Delete `public/assets/css/pitch-tabs.css` and `public/assets/css/offer.css`.
-3. In `public/index.html`, remove the fenced block between the
-   `PITCH TAB BAR` and `END PITCH TAB BAR` comment markers, and the
-   `pitch-tabs.css` `<link>` in the head (marked `PITCH CHROME`).
+3. In `public/index.html` and `public/sign-up/index.html`, remove the fenced
+   block between the `PITCH TAB BAR` and `END PITCH TAB BAR` comment markers,
+   and the `pitch-tabs.css` `<link>` in the head (marked `PITCH CHROME`).
 4. In `public/_headers`, remove the four `/original*` and `/offer*` blocks
    (marked with the pitch comment).
 
