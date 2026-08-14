@@ -1,0 +1,14 @@
+{
+  "name": "white-collar-boxing-london",
+  "version": "1.0.0",
+  "private": true,
+  "description": "White Collar Boxing London — static one-pager on Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
