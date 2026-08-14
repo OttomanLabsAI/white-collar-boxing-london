@@ -1,0 +1,29 @@
+/* ============================================================
+   PITCH TAB BAR — demo chrome, not part of the site.
+   Shared by /, /original/ and /offer/. Delete this whole file
+   when the pitch wrapper comes off — see README,
+   "Removing the pitch wrapper".
+   ============================================================ */
+.pitch-tabs{
+  display:flex;gap:2px;padding:6px 6px 0;
+  background:#060708;position:relative;z-index:90;
+}
+.pitch-tabs a{
+  flex:1;display:block;text-align:center;
+  padding:.6rem .4rem .5rem;
+  background:#14181D;border:1px solid rgba(237,231,220,.14);border-bottom:0;
+  color:#99A0AA;text-decoration:none;
+  font-family:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+  white-space:nowrap;
+}
+.pitch-tabs a b{font-weight:600;}
+.pitch-tabs a:hover{color:#EDE7DC;background:#1E242B;}
+.pitch-tabs a[aria-current="page"]{background:#C8102E;border-color:#C8102E;color:#fff;}
+.pitch-tabs a:focus-visible{outline:3px solid #C9A227;outline-offset:-3px;}
+@media (max-width:560px){
+  .pitch-tabs a{font-size:.6rem;letter-spacing:.08em;}
+}
+@media (max-width:360px){
+  .pitch-tabs a span{display:none;}
+}

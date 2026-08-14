@@ -1,0 +1,37 @@
+/* ============================================================
+   OFFER PAGE (pitch tab 3) — additions only.
+   Every value is harvested from main.css: same tokens, same
+   fonts, same component grammar. Delete public/offer/ and this
+   file when the pitch wrapper comes off — see README.
+   ============================================================ */
+
+.offer-hero{padding-block:clamp(4rem,8vw,6.5rem) clamp(3.5rem,6vw,5rem);}
+
+/* price cards — the pillar-card grammar with a display-face number */
+.offer-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));
+  gap:1px;background:rgba(237,231,220,.16);border:1px solid rgba(237,231,220,.16);
+}
+.offer-card{background:var(--ink);padding:2rem 1.7rem 2.2rem;}
+.offer-card__k{font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;color:var(--rope);text-transform:uppercase;}
+.offer-price__n{
+  font-family:var(--display);font-weight:900;text-transform:uppercase;
+  font-size:clamp(3.4rem,9vw,6.5rem);line-height:.9;margin-top:.9rem;color:var(--canvas);
+}
+.offer-price__n b{color:var(--red);font-weight:900;}
+.offer-price__s{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-2);margin:.6rem 0 1rem;}
+.offer-card p{color:#B7AFA2;font-size:.98rem;margin:0;}
+
+.offer-why{margin-top:clamp(2rem,4vw,3rem);max-width:62ch;color:#B7AFA2;}
+.offer-why strong{color:var(--canvas);font-weight:600;}
+
+/* closing band — the final-band red, split big-headline / how-to-reply */
+.offer-close{background:var(--red);color:#fff;}
+.offer-close__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center;}
+.offer-close h2{font-size:clamp(2.6rem,7vw,5.2rem);}
+.offer-close .eyebrow{color:rgba(255,255,255,.8);}
+.offer-close__how p{color:rgba(255,255,255,.94);font-size:1.08rem;max-width:44ch;margin:0;}
+@media (max-width:860px){
+  .offer-close__grid{grid-template-columns:1fr;}
+}

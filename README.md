@@ -46,6 +46,36 @@ Workers & Pages → Create → Import a repository), after which every push to
 `main` deploys automatically. `npm run deploy` deploys manually from a machine
 with Cloudflare credentials.
 
+## The sales pitch wrapper
+
+The deploy currently carries a three-tab sales demo around the site. An
+identical numbered bar sits at the very top of all three pages, so it reads as
+chrome around the demo rather than part of any site; the demo lands on the new
+design, with the story still running left to right.
+
+| Tab | Route | What it is |
+| --- | --- | --- |
+| 1 · The original | `/original/` | The club's site as it stands. A static local copy **could not be captured** — this build environment's network policy blocks `www.whitecollarboxinglondon.com`, so the tab says so plainly and falls back to the live site in a frame with an open-in-a-new-tab button. If their host also refuses framing, the note and button still stand. |
+| 2 · New site | `/` | The new one-pager. Visitors arriving at the link land here, not on the old site. |
+| 3 · The offer | `/offer/` | The ask: £500 one-off for the site, £50 per round of changes afterwards — built from the new site's own stylesheet and component grammar. |
+
+No page previously lived at another path, so no redirects were needed. The
+pitch pages carry `noindex` (meta and header) so the demo never turns up in a
+search result. The offer's comparison table only claims things verifiable from
+the club's own pages as Google lists them (checked 14 August 2026).
+
+### Removing the pitch wrapper — the day the client says yes
+
+1. Delete `public/original/` and `public/offer/` — each is self-contained.
+2. Delete `public/assets/css/pitch-tabs.css` and `public/assets/css/offer.css`.
+3. In `public/index.html`, remove the fenced block between the
+   `PITCH TAB BAR` and `END PITCH TAB BAR` comment markers, and the
+   `pitch-tabs.css` `<link>` in the head (marked `PITCH CHROME`).
+4. In `public/_headers`, remove the four `/original*` and `/offer*` blocks
+   (marked with the pitch comment).
+
+Nothing else references the pitch; the site is then left alone at the root.
+
 ## External resources
 
 - **Images** — photography, charity logos, the show poster, and the footer

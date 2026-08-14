@@ -19,3 +19,21 @@
 
 /
   Cache-Control: public, max-age=0, must-revalidate
+
+# Pitch chrome (remove these four blocks with the pitch wrapper):
+# the demo tabs must never turn up in a search result.
+/original
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=0, must-revalidate
+
+/original/
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=0, must-revalidate
+
+/offer
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=0, must-revalidate
+
+/offer/
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=0, must-revalidate

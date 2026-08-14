@@ -77,8 +77,19 @@ Content, design, and behaviour are as supplied by the owner. Do not tidy markup,
 rename classes, rewrite copy, or modernise CSS unless asked - changes to the
 design are their own release, requested deliberately.
 
+## Pitch chrome (temporary)
+
+`/original/` (live-frame fallback for the club's current site), `/offer/` (the
+price), and a fenced tab bar on the index wrap the site as a three-tab sales
+demo. The current site could not be mirrored locally - the sandbox egress
+policy blocks the club's domain - so tab 1 deliberately frames the live site
+and says so; never claim a local copy exists. The wrapper is designed to come
+off in minutes: follow "Removing the pitch wrapper" in the README, and keep
+the fence comments intact until then.
+
 ## Release ledger
 
 | Version | Title | Description |
 | --- | --- | --- |
 | v1.0 | Ten weeks from the desk, now live | The White Collar Boxing London one-pager is a real site: the whole pitch — the ten weeks, the safety story, the cost question, fight night — on one fast dark page that holds together from phone to desktop, with a themed page for wrong turns and deployment wired so every future push goes straight to production. |
+| v1.1 | Three tabs: theirs, ours, and the ask | The demo now opens on the new page, keeps the club's current site one click away for the side-by-side, and closes with the offer — five hundred one-off, fifty a round of changes — every comparison line checkable against what the club's own pages say. The whole wrapper peels off in minutes the day they say yes. |
