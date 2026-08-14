@@ -97,11 +97,15 @@ Nothing else references the pitch; the site is then left alone at the root.
 
 ## External resources
 
-- **Images** — photography, charity logos, the show poster, and the footer
+- **Images** — photography, charity logos, the show poster, and the club's
   logo are hotlinked from `https://www.whitecollarboxinglondon.com`
   (the club's live WordPress uploads). They are kept as absolute URLs
   deliberately; browsers load them directly from the live domain. Most carry
   `onerror` handlers that hide their block if the file ever disappears.
+- **The header logo** is the club's own reverse (white) logo file. If it
+  fails to load, the header falls back automatically to the typographic
+  badge, so the nav never shows a broken image. Vendoring the logo file
+  into `assets/img/` at handover would remove the external dependency.
   Build/CI sandboxes that block that domain will render grey gaps or
   placeholder boxes locally — that is a sandbox artifact, not a site defect.
 - **Fonts** — Big Shoulders Display, IBM Plex Sans, and IBM Plex Mono load

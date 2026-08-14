@@ -89,8 +89,16 @@ p:last-child{margin-bottom:0;}
   border-bottom:1px solid rgba(237,231,220,.12);
 }
 .nav__in{display:flex;align-items:center;gap:1.5rem;height:68px;}
-.nav__logo{font-family:var(--display);font-weight:900;font-size:1.15rem;line-height:.95;text-decoration:none;letter-spacing:.01em;}
-.nav__logo span{display:block;color:var(--red);}
+.nav__logo{
+  display:flex;align-items:center;text-decoration:none;
+  font-family:var(--display);font-weight:900;font-size:1.15rem;line-height:.95;letter-spacing:.01em;
+}
+.nav__logo-img{height:46px;width:auto;display:block;}
+.nav__logo-text{display:none;}
+.nav__logo-text span{display:block;color:var(--red);}
+/* if the club-hosted logo fails to load, the typographic badge steps in */
+.nav__logo--text .nav__logo-img{display:none;}
+.nav__logo--text .nav__logo-text{display:block;}
 .nav__links{display:flex;gap:1.6rem;margin-left:auto;list-style:none;padding:0;margin-block:0;}
 .nav__links a{
   font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;
